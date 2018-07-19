@@ -1,1 +1,1 @@
-console.log('wtf webpack?')
+console.log('wtf is webpack?')
