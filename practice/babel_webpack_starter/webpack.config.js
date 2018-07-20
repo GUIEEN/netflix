@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
   entry: {
-    app: path.resolve(__dirname, 'src/app.js')
+    app: ['babel-polyfill', path.resolve(__dirname, 'src/app.js')]
   },
   output: {
     path: path.resolve(__dirname, 'build'),
@@ -15,7 +15,7 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
-          presets: ['env']
+          presets: ['env', 'stage-0']
         }
       }
     ]
