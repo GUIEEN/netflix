@@ -1,0 +1,27 @@
+{
+  "name": "d4",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "gh-pages": "^1.2.0",
+    "parcel-bundler": "^1.9.7",
+    "postcss-grid-kiss": "^2.0.0",
+    "postcss-preset-env": "^5.2.3"
+  },
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "prebuild": "rm -rf dist",
+    "build": "parcel build src/index.html --public-url https://guieen.github.io/netflix/",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist"
+  },
+  "postcss": {
+    "plugins": {
+      "postcss-preset-env": {
+        "stage": 0
+      },
+      "postcss-grid-kiss": true
+    }
+  }
+}

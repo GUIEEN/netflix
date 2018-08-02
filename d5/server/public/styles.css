@@ -1,0 +1,12 @@
+.mine {
+  background: #3498db;
+  color: white;
+}
+.yours {
+  background: #e67e22;
+}
+
+.messageForm,
+.nicknameForm {
+   display: none;
+}
